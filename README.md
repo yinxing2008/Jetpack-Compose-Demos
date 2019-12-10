@@ -2,7 +2,6 @@
 demos for jetpack compose
 # Blog
 https://blog.csdn.net/yinxing2008/article/details/103477567
-
 # Jetpack Compose是什么?
 Jetpack Compose 是安卓用于构建UI的一种新方式,采用代码而非xml文件方式，写法与Flutter非常相似。
 官方主页：[https://developer.android.google.cn/jetpack/compose](https://developer.android.google.cn/jetpack/compose)
@@ -24,13 +23,14 @@ Jetpack Compose 是安卓用于构建UI的一种新方式,采用代码而非xml�
 2. Composable函数必须添加@Preview注解才能预览.
 3. 代码修改后,需要重新编译才能预览.
 4. 目前还不完善,相比于Flutter,还处于幼儿园水平.
+5. 相比于xml画页面布局,效率会有降低.
 # 常见控件使用样例
-1. 显示文本
+## 1. 文本显示
 ```
 Text(text = "众鸟高飞尽，孤云独去闲。相看两不厌，只有敬亭山。")
 ```
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82MTY5Nzg5LWE3ZTg5NGU3MWYzYmEzNzIucG5n?x-oss-process=image/format,png)
-2. 文本输入框
+![](https://user-gold-cdn.xitu.io/2019/12/10/16eeeeee13041489?w=264&h=78&f=png&s=14041)
+## 2. 文本输入框
 ```
 val state = +state { "Text Field to input" }
 TextField(
@@ -38,13 +38,13 @@ TextField(
         onValueChange = { state.value = it }
 )
 ```
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82MTY5Nzg5LTE4MGM0YTI5NjFiOTY5NmMucG5n?x-oss-process=image/format,png)
-3. 按钮
+![](https://user-gold-cdn.xitu.io/2019/12/10/16eeeeee131fc621?w=317&h=237&f=png&s=30556)
+## 3. 按钮
 ```
 Button(text = "咬我啊", onClick = { Log.v("test", "被咬了") })
 ```
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82MTY5Nzg5LTdmMWRiY2Y4Y2Q4ZTU4NGYucG5n?x-oss-process=image/format,png)
-4.弹出框
+![](https://user-gold-cdn.xitu.io/2019/12/10/16eeeeee127b32d6?w=105&h=47&f=png&s=3864)
+## 4.弹出框
 ```
 MaterialTheme {
     Column {
@@ -85,8 +85,8 @@ MaterialTheme {
     }
 }
 ```
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82MTY5Nzg5LWJkZWM5ZWYyNjQ5ZTg3ZTcucG5n?x-oss-process=image/format,png)
-5. 开关
+![](https://user-gold-cdn.xitu.io/2019/12/10/16eeeeee17a40dc3?w=258&h=203&f=png&s=11600)
+## 5. 开关
 ```
 MaterialTheme {
     val checkedState = +state { true }
@@ -96,8 +96,8 @@ MaterialTheme {
     )
 }
 ```
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82MTY5Nzg5LTRkOTNjZTVlZTM4NDE3MjkucG5n?x-oss-process=image/format,png)
-6. 单选框
+![](https://user-gold-cdn.xitu.io/2019/12/10/16eeeeee180fdd55?w=101&h=64&f=png&s=3094)
+## 6. 单选框
 ```
 MaterialTheme {
     RadioButton(selected = true,
@@ -105,8 +105,8 @@ MaterialTheme {
     )
 }
 ```
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82MTY5Nzg5LTI0MjIyOGZkNmYzMjZhNTYucG5n?x-oss-process=image/format,png)
-7. 复选框
+![](https://user-gold-cdn.xitu.io/2019/12/10/16eeeeee16bff2a3?w=34&h=34&f=png&s=1615)
+## 7. 复选框
 ```
 MaterialTheme {
     val checkedState = +state { true }
@@ -116,8 +116,8 @@ MaterialTheme {
     )
 }
 ```
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82MTY5Nzg5LTBlODYyYmJjZDViMGFmNWIucG5n?x-oss-process=image/format,png)
-8. 单选框组
+![](https://user-gold-cdn.xitu.io/2019/12/10/16eeeeee3cc7e245?w=41&h=36&f=png&s=942)
+## 8. 单选框组
 ```
 MaterialTheme {
     val radioOptions = listOf("A", "B", "C")
@@ -129,8 +129,8 @@ MaterialTheme {
     )
 }
 ```
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82MTY5Nzg5LTlmOTc5YzUzMjg1NjBlMzMucG5n?x-oss-process=image/format,png)
-9.图片
+![](https://user-gold-cdn.xitu.io/2019/12/10/16eeeeee3f07bdfc?w=86&h=122&f=png&s=3983)
+## 9.图片
 ```
 Container(modifier = Height(300.dp) wraps Expanded) {
     Clip(shape = RoundedCornerShape(4.dp)) {
@@ -138,7 +138,7 @@ Container(modifier = Height(300.dp) wraps Expanded) {
     }
 }
 ```
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82MTY5Nzg5LThjMzJiNzJiNzcwMzY1NDQucG5n?x-oss-process=image/format,png)
+![](https://user-gold-cdn.xitu.io/2019/12/10/16eeeeee3f07d9a5?w=316&h=279&f=png&s=146975)
 
 # 源代码
 [https://github.com/cxyzy1/Jetpack-Compose-Demos](https://github.com/cxyzy1/Jetpack-Compose-Demos)
