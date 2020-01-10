@@ -13,8 +13,10 @@ import androidx.ui.material.MaterialTheme
 import androidx.ui.material.TextButtonStyle
 import androidx.ui.material.withOpacity
 import androidx.ui.text.style.TextOverflow
+import androidx.ui.tooling.preview.Preview
 import java.security.SecureRandom
 
+@Preview
 @Composable
 fun buttonAndTextRow() {
     var secureRandom: SecureRandom = SecureRandom()
